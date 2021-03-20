@@ -40,7 +40,7 @@
         <div align="center" class="logo_div">
             <img src="../Res/search_logo.svg" class="search_logo">
         </div>
-        <form method="post" action="/studentsSelect/Message/message.php">
+        <form method="post" action="/BookStore/Message/message.php">
             <div style="position: relative">
                 <select name="type" class="select_in">
                     <option id="name" selected="selected">按人员检索</option>

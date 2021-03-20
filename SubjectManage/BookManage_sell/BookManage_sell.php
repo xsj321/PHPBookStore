@@ -7,7 +7,6 @@ if ($_POST)
     $subjectName = $_POST["subjectName"];
     $subjectTerm = $_POST["subjectTerm"];
     $subjectTime = $_POST["subjectTime"];
-    $subjectMark = $_POST["subjectMark"];
 
     echo <<<EOF
 <html lang="en">
@@ -15,27 +14,28 @@ if ($_POST)
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        @import "SubjectManage_update.css";
+        @import "BookManage_sell.css";
     </style>
 </head>
 <body>
     <form id="form" action="BookManage_sell_submit.php" method="post">
+        <input type="hidden" name="id" value=$subjectID>
         <div class="input-box">
         <img class="back" src="../Res/back.png" onclick="back()">
          <div class="input-box-in">
             <div class="left-box">
                 <table class="input-table">
                     <tr>
-                        <td>课程号: </td>
-                        <td> <input name="subjectID" type="text" value="$subjectID"></td>
+                        <td>书籍编号: </td>
+                        <td>$subjectID</td>
                     </tr>
                     <tr>
-                        <td>课程名称: </td>
-                        <td> <input name="subjectName" type="text" value="$subjectName"></td>
+                        <td>书籍名称: </td>
+                        <td>《 $subjectName 》</td>
                     </tr>
                     <tr>
-                        <td>开课学期: </td>
-                        <td><input name="subjectTerm" type="text" value="$subjectTerm"></td>
+                        <td>书籍库存: </td>
+                        <td>$subjectTerm</td>
                     </tr>
                 </table>
                  <br>
@@ -45,12 +45,13 @@ if ($_POST)
             <div class="right-box">
                 <table class="input-table">
                     <tr>
-                        <td>课程学时: </td>
-                        <td><input name="subjectTime" type="text" value="$subjectTime"></td>
+                        <td>销售总数: </td>
+                        <td>$subjectTime</td>
                     </tr>
+                    
                     <tr>
-                        <td>课程学分:</td>
-                        <td> <input name="subjectMark" type="text" value="$subjectMark"></td>
+                        <td>出售数量: </td>
+                        <td><input name="sell_num" type="text" value="1"></td>
                     </tr>
                 </table>
 

@@ -10,7 +10,7 @@ if($_POST){
 
     $lastSeach = $_SESSION["last_search"];
     $lastType = $_SESSION["last_type"];
-    echo "<form  id='form1' name='form1' method='post' action='http://127.0.0.1/studentsSelect/Message/message.php'>
+    echo "<form  id='form1' name='form1' method='post' action='http://127.0.0.1/BookStore/Message/message.php'>
              <input type='hidden' name='person' value='$lastSeach'>
              <input type='hidden' name='order' value='专业'>
              <input type='hidden' name='type' value='$lastType'>

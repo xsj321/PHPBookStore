@@ -25,7 +25,7 @@ else $last_search = '';
 <body>
 <div class="top">
     <img class="logo" src="../Res/search_logo.svg" onclick="window.location.href ='../search/search.php'">
-    <form method="post" action="/studentsSelect/Message/message.php">
+    <form method="post" action="/BookStore/Message/message.php">
     <div class="search_box_in">
         <select name="type" class="select">
             <option id="name" selected="selected">按人员检索</option>
@@ -51,11 +51,11 @@ else $last_search = '';
 if ($_SESSION["SU_admin"]){
     echo <<<EOF
 <div class="menu">
-    <div  class="menu_item" onclick="window.location.href= 'http://127.0.0.1/studentsSelect/addstudent/addstudent.html';">
+    <div  class="menu_item" onclick="window.location.href= 'http://127.0.0.1/BookStore/addstudent/addstudent.html';">
         <img src="../Res/student.png"><a>新建学生信息</a>
     </div>
     <div class="menu_item">
-        <img src="../Res/subject.png" onclick="window.location.href='http://127.0.0.1/studentsSelect/SubjectManage/SubjectManage_home.php';"><a>管理课程信息</a>
+        <img src="../Res/subject.png" onclick="window.location.href='http://127.0.0.1/BookStore/SubjectManage/SubjectManage_home.php';"><a>管理课程信息</a>
     </div>
 </div>
 EOF;

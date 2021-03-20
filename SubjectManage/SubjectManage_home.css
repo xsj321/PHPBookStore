@@ -72,7 +72,7 @@ select:-webkit-autofill {
 
 .grid_item{
     width:200px;
-    height: 270px;
+    height: 280px;
     border: #d83078 solid 3px;
     border-radius: 25px;
     box-shadow:2px 2px 5px #7d7979
@@ -130,6 +130,7 @@ select:-webkit-autofill {
 .update{
     width: 80%;
     margin: 0 auto;
+    margin-top: 5px;
     height: 42px;
     border-radius: 20px;
     background-color: #d83078;

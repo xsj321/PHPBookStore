@@ -59,7 +59,7 @@ echo <<<EOF
     }
 
     function back() {
-        window.location.href = "http://127.0.0.1/studentsSelect/search/search.php"
+        window.location.href = "http://127.0.0.1/BookStore/search/search.php"
     }
 </script>
 </body>

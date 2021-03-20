@@ -24,7 +24,7 @@ class SubjectManage_DataBaseUtil
     public function FindSubject_by_Name($Name){
 
             $sql = <<<EOF
-select * from kcb where 课程名 LIKE "%$Name%";
+select * from books where book_name LIKE "%$Name%";
 EOF;
             $inner_res = $this->NowPDO->query($sql);
             $inner_res_array = $inner_res->fetchAll(PDO::FETCH_ASSOC);
@@ -32,11 +32,10 @@ EOF;
             foreach ($inner_res_array as $Now_class)
             {
                 array_push($Classes_object_List,new Subject(
-                    $Now_class["课程号"],
-                    $Now_class["课程名"],
-                    $Now_class["开课学期"],
-                    $Now_class["学时"],
-                    $Now_class["学分"]
+                    $Now_class["id"],
+                    $Now_class["book_name"],
+                    $Now_class["book_total"],
+                    $Now_class["book_sell"]
                 ));
             }
         return $Classes_object_List;
@@ -47,34 +46,27 @@ EOF;
         $subjectName = $subject->getClassName();
         $subjectTerm = $subject->getClassTerm();
         $subjectTime = $subject->getClassTime();
-        $subjectMark = $subject->getClassMark();
         $sql = <<<EOF
-update kcb set 
-课程号 = "$subjectID",
-课程名 = "$subjectName",
-开课学期 = $subjectTerm,
-学时 = $subjectTime,
-学分 = $subjectMark 
-where 课程号 = "$LastID";
+update books set 
+book_name = "$subjectName",
+book_total = $subjectTerm,
+book_sell = $subjectTime,
+where id = "$LastID";
 EOF;
         echo $sql;
         $this->NowPDO->exec($sql);
     }
 
     public function AddSubject(Subject $subject){
-        $subjectID = $subject->getClassID();
         $subjectName = $subject->getClassName();
         $subjectTerm = $subject->getClassTerm();
         $subjectTime = $subject->getClassTime();
-        $subjectMark = $subject->getClassMark();
         $sql = <<<EOF
 insert into kcb 
 values(
-       '$subjectID',
        '$subjectName',
        $subjectTerm,
        $subjectTime,
-       $subjectMark
        );
 EOF;
         echo $sql;
@@ -90,5 +82,15 @@ EOF;
         echo $sql;
         $this->NowPDO->exec($sql);
 
+    }
+
+    public function SellBook($id,$num){
+        $sql = <<<EOF
+update books set 
+book_total = book_total - $num,
+book_sell = book_sell + $num
+where id = $id;
+EOF;
+        $this->NowPDO->exec($sql);
     }
 }

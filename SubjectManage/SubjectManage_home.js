@@ -10,6 +10,13 @@ function OnUpdateClick(element) {
     form.submit();
 }
 
+function OnSellClick(element) {
+    let tag = element.id;
+    console.log(tag);
+    let form = document.getElementById(tag+"sell");
+    form.submit();
+}
+
 function OnDelete(element) {
     var r=confirm("确认删除");
     if (r){
@@ -21,9 +28,9 @@ function OnDelete(element) {
 }
 
 function OnAddClick() {
-    window.location.href='http://127.0.0.1/studentsSelect/SubjectManage/SubjectManage_add/SubjectManage_add.php';
+    window.location.href='http://127.0.0.1/BookStore/BookManage/SubjectManage_add/SubjectManage_add.php';
 }
 
 function OnBackClick() {
-    window.location.href = "http://127.0.0.1/studentsSelect/search/search.php";
+    window.location.href = "http://127.0.0.1/BookStore/search/search.php";
 }

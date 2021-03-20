@@ -7,15 +7,13 @@ class Subject
     private $className;
     private $classTerm;
     private $classTime;
-    private $classMark;
 
-    public function __construct($classID, $className, $classTerm, $classTime, $classMark)
+    public function __construct($classID, $className, $classTerm, $classTime)
     {
         $this->classID = $classID;
         $this->className = $className;
         $this->classTerm = $classTerm;
         $this->classTime = $classTime;
-        $this->classMark = $classMark;
     }
 
     /**
@@ -50,13 +48,6 @@ class Subject
         return $this->classTime;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getClassMark()
-    {
-        return $this->classMark;
-    }
 
 
 }
