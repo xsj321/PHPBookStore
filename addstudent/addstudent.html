@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import "../input/input.css";
+    </style>
+</head>
+<body>
+<form id="form" action="addstudent_submit.php" method="post">
+    <input name="LastID" type="hidden" value="$ID" >
+    <div class="input-box">
+        <img class="back" src="../Res/back.png" onclick="back()">
+        <div class="input-box-in">
+            <div class="left-box">
+                <table class="input-table">
+                    <tr>
+                        <td>账号: </td>
+                        <td> <input name="ID" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>密码:</td>
+                        <td><input name="passwd" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>学号: </td>
+                        <td> <input name="studentID" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>姓名: </td>
+                        <td><input name="name" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>性别: </td>
+                        <td> <input name="sex" type="text"></td>
+                    </tr>
+                </table>
+                <br>
+
+            </div>
+
+            <div class="right-box">
+                <table class="input-table">
+                    <tr>
+                        <td>出生日期: </td>
+                        <td><input name="birth" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>专业:</td>
+                        <td> <input name="profession" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>总学分: </td>
+                        <td><input name="mark" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>备注:</td>
+                        <td> <input name="other" type="text"></td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+        <div class="accept" onclick="OnClick()">
+            <span>√</span>
+        </div>
+    </div>
+</form>
+<script>
+    function OnClick() {
+        let form =  document.getElementById("form");
+        form.submit();
+    }
+
+    function back() {
+        window.location.href = "http://127.0.0.1/studentsSelect/search/search.php"
+    }
+</script>
+</body>
+</html>

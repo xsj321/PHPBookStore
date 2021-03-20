@@ -1,0 +1,93 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+input{
+    border: none;
+    outline: none;
+    border-bottom: #2976a9 solid 2px;
+}
+
+input:hover{
+    border-bottom: #32b1b2 solid 2px;
+}
+
+
+.input-box{
+    text-align: center;
+    position: relative;
+    border-radius: 55px;
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    box-shadow:2px 2px 5px #7d7979;
+    top: 40%; /*偏移*/
+    transform: translateY(40%);
+}
+
+.left-box{
+    width: 300px;
+    float: left;
+    text-align: left;
+}
+
+.right-box{
+    width: 300px;
+    float: left;
+    text-align: left;
+}
+
+.input-table{
+    border-spacing: 30px;
+}
+
+.input-box-in{
+    float: left;
+    margin-left: 10px;
+    height: 300px;
+    width: 600px;
+
+}
+
+.accept{
+    float: right;
+    border-radius: 0  50px 50px 0;
+    height: 300px;
+    width: 100px;
+    background: #d83078;
+}
+
+.accept:hover{
+    box-shadow:2px 2px  3px #7d7979;
+}
+.accept span{
+    text-align: center;
+    line-height: 300px;
+    font-family: 黑体;
+    font-weight: bold;
+    color: white;
+    font-size: 100px;
+}
+
+.back{
+    height: 30px;
+    float: left;
+    margin-top: 16px;
+    margin-left: 20px;
+    border-radius: 50px;
+
+}
+
+.back:hover{
+    box-shadow:2px 2px  3px #7d7979;
+}
+

@@ -1,0 +1,130 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.main_area{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    top: 40%; /*偏移*/
+    transform: translateY(-50%);
+}
+.search_box_logo{
+    background: url(../Res/send.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 6px;
+    left: 0
+}
+.search_box{
+    width: 70%;
+    height: 40px;
+    border-radius: 50px;
+    background: none;
+    padding-left: 120px;
+    font-size: 18px;
+    outline-style: none;
+    border: 1px solid #ccc;
+}
+
+.search_box:hover{
+    border: 1px solid rgb(253, 253, 253);
+    box-shadow:2px 2px 5px #7d7979
+}
+
+
+
+.search_logo{
+    text-align: center;
+}
+
+.buttons{
+    padding-top: 20px;
+}
+
+.search_button{
+    width: 110px;
+    height: 35px;
+    border-radius: 5px;
+    outline-style: none;
+    border: 2px solid #2976a9;
+    background: white;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei UI ";
+}
+
+.search_button:hover{
+    background: #2976a9;
+    color: white;
+}
+.logo_div{
+
+}
+
+.select{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    border: none;
+    outline-style: none;
+
+}
+
+.select_in{
+    float: left;
+    position: absolute;
+
+    margin-top: 15px;
+    margin-left: 15px;
+    border: none;
+    outline-style: none;
+
+}
+
+.header{
+    margin: 0 auto;
+    width: 99%;
+    height: 50px;
+    border-bottom: #2ac7d2 solid 1px;
+}
+
+.header div{
+    margin-top: 10px;
+    float: right;
+    margin-right: 24px;
+}
+
+.header div a{
+    font-family: "Microsoft YaHei UI";
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.header_title{
+    font-family: 黑体;
+    font-weight: bold;
+    font-size: 12px;
+    color: #2976a9;
+}
+
+.logo{
+    position: absolute;
+    left: 10px;
+    top: -21px;
+    float: left;
+}
+
+.logo img{
+    float: left;
+    height: 60px;
+}

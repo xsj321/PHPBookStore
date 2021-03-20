@@ -1,0 +1,270 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    transform: scale(1);
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.studentID{
+    padding-right: 3px;
+    width: 13px;
+    height: 13px;
+}
+
+.icon_name{
+    padding-top: 3px;
+    padding-right: 3px;
+    width: 15px;
+    height: 15px;
+}
+
+.tip{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.fist_row{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.fist_row span{
+    padding-left: 8px;
+    color: #2475a3;
+    font-family: Consolas;
+    font-weight: bold;
+}
+
+.item{
+    margin-left: 20px;
+    border-left: #2475a3 solid 2px;
+    font-weight: bold;
+}
+
+.item span{
+    padding-left: 8px;
+    color: #2475a3;
+    font-family: Consolas;
+    font-weight: bold;
+}
+
+.date{
+    padding-left: 8px;
+    color: #2475a3;
+    font-family: Consolas;
+    font-weight: bold;
+
+}
+
+.tip_header{
+    width: 95%;
+    height: auto;
+    position: relative;
+    box-shadow:1px 1px 3px dimgrey;
+    left: 2%;
+    border-left: #2475a3 solid 10px;
+}
+
+.fist{
+    border-bottom: #2475a3 solid 1px;
+}
+
+.tip_inner{
+
+}
+
+.username{
+    padding-left: 8px;
+    color: #2475a3;
+    font-family: Consolas;
+    font-weight: bold;
+
+}
+
+.floor{
+    float: right;
+    position: relative;
+    right: 1%;
+    font-size: 20px;
+    color: #2475a3;
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.message{
+    font-size: 20px;
+    font-family: 微软雅黑;
+}
+.classes{
+    width: 95%;
+    height: auto;
+    position: relative;
+    box-shadow:1px 1px 3px dimgrey;
+    left: 2%;
+    border-left: #2475a3 solid 5px;
+}
+
+.class_item{
+    margin-left: 20px;
+    font-weight: bold;
+    color: #10326f;
+}
+
+
+
+.class_item span{
+    color: #2475a3;
+    margin-right: 10px;
+    font-family: Consolas;
+    font-weight: bold;
+}
+
+.top{
+    width: 100%;
+    height: 10%;
+    background: #2475a3;
+    white-space: nowrap;
+}
+
+.logo {
+    float: left;
+    width: 20%;
+    height: auto;
+    text-align: left;
+    margin-right: 10px;
+}
+.title{
+
+    font-family: 微软雅黑;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -20%;
+    color: white;
+}
+
+.user{
+    position: relative;
+    float: right;
+    right: 2%;
+    top: 50%;
+    font-weight: bold;
+    color: white;
+}
+
+.logout{
+    text-decoration:none;
+}
+
+.search_box{
+    width: 100%;
+    height: 40px;
+    padding-left: 10%;
+    border-radius: 50px;
+    font-size: 15px;
+    background-color: white;
+    outline-style: none;
+    border: 1px solid #ccc;
+}
+
+.search_box:hover{
+    border: 1px solid rgb(253, 253, 253);
+    box-shadow:2px 2px 5px #7d7979
+}
+.search_box_in
+{
+    margin-top: 1.2%;
+    margin-left: 20px;
+    float: left;
+    width: 60%;
+
+}
+
+.buttons {
+    float: left;
+    margin-top: 0.7%;
+}
+
+.search_button{
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    border: none;
+    background-size: 70%;
+    background-position-x: center;
+    background-position-y: center;
+    outline: none;
+    background-color: white;
+    background-image: url("../Res/Search.png");
+}
+
+.search_button:hover{
+    border: 1px solid rgb(253, 253, 253);
+    box-shadow:2px 2px 5px #7d7979
+}
+
+.select{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    outline-style: none;
+    font-weight: bold;
+    font-family: "Microsoft YaHei UI";
+
+}
+
+.order{
+    float: left;
+    position: absolute;
+    margin-top: 1.2%;
+    right: 10%;
+}
+
+.order_radio{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei UI";
+}
+
+.notfound{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.notfound-img-div{
+    margin: 0 auto;
+    width: 60%;
+
+}
+
+.notfound-img{
+    width: 100%;
+
+}
+
+.notfound_text{
+    margin: 0 auto;
+    text-align: center;
+    color: #ff5657;
+    font-weight: bold;
+    font-size: 600%;
+    font-family: 黑体;
+}
+
