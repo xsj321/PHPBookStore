@@ -15,7 +15,7 @@
     <body>
     <div class="login_window">
         <div align="center">
-            <img src="../Res/logo.webp" class="logo">
+            <img src="../Res/logo.png" class="logo">
         </div>
 
         <form action="" method="post" id="the_form">

@@ -18,8 +18,20 @@ class SubjectManage_DataBaseUtil
             print "Error!: " . $e->getMessage() . "<br/>";
             die();
         }
+
     }
 
+    function console_log($data)
+    {
+        if (is_array($data) || is_object($data))
+        {
+            echo("<script>console.log('".json_encode($data)."');</script>");
+        }
+        else
+        {
+            echo("<script>console.log('".$data."');</script>");
+        }
+    }
 
     public function FindSubject_by_Name($Name){
 
@@ -55,6 +67,62 @@ where id = "$LastID";
 EOF;
         echo $sql;
         $this->NowPDO->exec($sql);
+    }
+
+    public function FindIsBuy(Book $book){
+        $bookName = $book->getBookName();
+        $sql = <<<EOF
+select book_total from books where book_name = "$bookName"
+EOF;
+        $inner_res = $this->NowPDO->query($sql);
+        $res = $inner_res->fetchAll(PDO::FETCH_ASSOC);
+        if (sizeof($res) == 0)
+        {
+            return -1;
+        }
+        $lastNum =  $res[0]["book_total"];
+        $this->console_log($lastNum);
+        return $lastNum;
+    }
+
+    public function AddOrder(Book $book){
+        $nowUser =  $_SESSION['username'];
+        $bookName = $book->getBookName();
+        $sql = <<<EOF
+SELECT id from books WHERE book_name = "$bookName"
+EOF;
+        $PDOStatement = $this->NowPDO->query($sql);
+        $all = $PDOStatement->fetchAll(PDO::FETCH_ASSOC);
+        $bookID = $all[0][id];
+
+        $sql = <<<EOF
+INSERT book_orders (user_id,book_id,time) VALUES("$nowUser","$bookID",NOW())
+EOF;
+        $this->NowPDO->exec($sql);
+
+    }
+
+
+    public function AddBook(Book $book){
+        $bookName = $book->getBookName();
+        $bookBuyNum = $book->getBookBuyNum();
+        $LastNum =  $this->FindIsBuy($book);
+
+        if ($LastNum == -1){
+            $sql =<<<EOF
+INSERT books (book_name,book_total,book_sell) VALUES("$bookName","$bookBuyNum","0")
+EOF;
+            $this->NowPDO->exec($sql);
+            $this->AddOrder($book);
+            return;
+        }
+
+        $nowNum = $LastNum+$bookBuyNum;
+        $sql = <<<EOF
+UPDATE books set book_total = $nowNum WHERE book_name = "$bookName"
+EOF;
+        $this->NowPDO->exec($sql);
+        $this->AddOrder($book);
     }
 
     public function AddSubject(Subject $subject){

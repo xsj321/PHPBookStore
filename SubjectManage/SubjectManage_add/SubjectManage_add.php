@@ -16,34 +16,18 @@ echo <<<EOF
             <div class="left-box">
                 <table class="input-table">
                     <tr>
-                        <td>课程号: </td>
-                        <td> <input name="subjectID" type="text" value=""></td>
+                        <td>书籍名称: </td>
+                        <td> <input name="BookName" type="text" value=""></td>
                     </tr>
                     <tr>
-                        <td>课程名称: </td>
-                        <td> <input name="subjectName" type="text" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>开课学期: </td>
-                        <td><input name="subjectTerm" type="text" value=""></td>
+                        <td>采购数量: </td>
+                        <td><input name="BookBuyNum" type="text" value=""></td>
                     </tr>
                 </table>
                  <br>
             </div>
 
-            <div class="right-box">
-                <table class="input-table">
-                    <tr>
-                        <td>课程学时: </td>
-                        <td><input name="subjectTime" type="text" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>课程学分:</td>
-                        <td> <input name="subjectMark" type="text" value=""></td>
-                    </tr>
-                </table>
-                <br>
-            </div>
+            
         </div>
         
         <div class="accept" onclick="OnClick()">

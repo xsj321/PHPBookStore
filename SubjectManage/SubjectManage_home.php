@@ -19,7 +19,7 @@
     <div class="search_box">
         <form id="search" action="" method="post">
             <img class="search_button" src="Res/Search.png" onclick="search()">
-            <input name="subject_name" class="search_box_in" type="text" placeholder="输入课程名称查找">
+            <input name="subject_name" class="search_box_in" type="text" placeholder="输入书籍名称查找">
 
         </form>
     </div>

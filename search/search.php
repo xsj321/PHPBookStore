@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DDUPSS</title>
+    <title>书籍管理系统</title>
     <style type="text/css">
         @import "search.css";
     </style>
@@ -28,7 +28,7 @@
                 }
                 else
                 {
-                    echo "学生";
+                    echo "采购员";
                 }
                 ?></a>
         </div>
@@ -38,14 +38,14 @@
     </div>
     <div class="main_area" align="center">
         <div align="center" class="logo_div">
-            <img src="../Res/search_logo.svg" class="search_logo">
+            <img src="../Res/logo.png" class="search_logo">
         </div>
         <form method="post" action="/BookStore/Message/message.php">
             <div style="position: relative">
                 <select name="type" class="select_in">
                     <option id="name" selected="selected">按人员检索</option>
-                    <option id="profession" >按专业检索</option>
-                    <option id="class">按课程检索</option>
+                    <option id="profession" >按类别检索</option>
+                    <option id="class">按书籍检索</option>
                 </select>
                 <input type="text" class="search_box" name="person">
                 <input type="hidden" name="order" value="学号">

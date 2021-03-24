@@ -28,7 +28,7 @@ function OnDelete(element) {
 }
 
 function OnAddClick() {
-    window.location.href='http://127.0.0.1/BookStore/BookManage/SubjectManage_add/SubjectManage_add.php';
+    window.location.href='http://127.0.0.1/BookStore/SubjectManage/SubjectManage_add/SubjectManage_add.php';
 }
 
 function OnBackClick() {
