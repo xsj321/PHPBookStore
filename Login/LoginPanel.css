@@ -28,7 +28,6 @@ select:-webkit-autofill {
     margin: 0 auto;
     background-color: white;
     box-shadow: 1px 1px 3px dimgrey;
-    border-radius: 20px;
     position: relative;
     top: 50%;
     transform: translateY(-50%) scale(1.5);
